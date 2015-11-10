@@ -9,13 +9,9 @@ RSpec.describe RecursiveBacktrackingStrategy do
   subject { described_class.new(width, height, seed) }
 
   describe '.new' do
-    it 'stores width' do
+    it 'stores supplied attributes' do
       expect(subject.width).to eq(width)
-    end
-    it 'stores height' do
       expect(subject.height).to eq(height)
-    end
-    it 'stores seed' do
       expect(subject.seed).to eq(seed)
     end
   end
