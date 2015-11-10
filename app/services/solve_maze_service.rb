@@ -1,3 +1,5 @@
+require_relative '../strategies/basic_solver_strategy.rb'
+
 class SolveMazeService
   attr_accessor :maze, :start, :finish, :strategy
 
@@ -6,6 +8,6 @@ class SolveMazeService
   end
 
   def call
-    strategy.new.call(maze, start, finish)
+    strategy.new(maze, start, finish).call
   end
 end

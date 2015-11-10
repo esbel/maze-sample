@@ -25,8 +25,8 @@ RSpec.describe SolveMazeService do
   end
 
   describe '#call' do
-    it 'calls the strategy using width, height and seed' do
-      expect(strategy_instance).to receive(:call).with(maze, start, finish)
+    it 'calls the strategy' do
+      expect(strategy_instance).to receive(:call)
 
       subject.call
     end
